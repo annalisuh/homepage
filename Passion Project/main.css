@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+h1{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 70px; 
+    text-align: center; 
+    letter-spacing: 0.25cap;
+    margin-bottom:20px;
+    padding-top: 115px;
+}
+
+p{
+    text-align: center;
+    font-size: 30px;
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+
+/* Style the tab buttons */
+.tablink {
+    background-color: #000000;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    display: flex;
+    justify-content: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    word-spacing: 2cm;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 0.25cm;
+    width: 25%;
+    text-decoration: none;
+  }
+  
+  .tablink:last-child{
+    margin-right:0;
+  }
+
+  /* Change background color of buttons on hover */
+  .tablink:hover {
+    background-color: #ffffff;
+    color: black;
+    transform: translateY(-5px); /* Slightly lift the tab on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+
+  
+  /* Set default styles for tab content */
+  .tabcontent {
+    color: white;
+    display: none;
+    padding: 50px;
+    text-align: center;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #ccc;
+  }
+
+  /* Show the content that corresponds to the current hash in the URL */
+:target {
+    display: block;
+  }
+  
+  /* Optional: Style active tab */
+  :target + .tablink {
+    background-color: #ccc;
+    color: rgb(0, 0, 0);
+  }
+
+  /* main container for the layout */
+  .grid-container {
+    display: flex; /* Align content horizontally (left and right) */
+    justify-content: flex-start; /* Align the content to the left */
+    gap: 20px; /* Add space between the left and right sections */
+    max-width: 100%;
+    margin: 0 auto; /* Center container */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  }
+  
+  .card {
+    flex: 1 1 300px; /* Allows the card to grow, shrink, and set the minimum width */
+    background: #fff;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20x;
+    width: 40%;
+    align-items: right;
+  }
+
+  .card-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card {
+    width: 100%; /* Cards take full width */
+  }
+  
+  /* Left side (Starter Pack) card styling */
+.starter-pack {
+    width: 60%; /* Make the starter pack take 40% of the space */
+    display: flex;
+    height: 2000px; 
+    justify-content: flex-start; /* Center content horizontally */
+    flex-direction: column; /* Align the content vertically */
+    align-items: center; 
+  }
+
+
+  /* Coffee image styling */
+.pack-img {
+    width: 250%; 
+    border-radius: 5px;
+    margin: 20px 0;
+    padding-top: 15%;
+    z-index:  2;  /* Ensure the image is above text */
+    object-position: center center; 
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-left: -20px; 
+    height: auto; 
+    image-rendering: crisp-edges, optimizeQuality;
+    object-fit: cover; 
+}
+
+
+/* Text around the image */
+.left-text, .bottom-text {
+    position: absolute;
+    font-size: 1.2em;
+    color: #333;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.left-text {
+    margin-top: -130px;
+    margin-left: 50px;
+    margin-bottom: 5px;
+    font-size: 2em;
+    font-weight: 100;
+    letter-spacing: 10px;
+    left: 10px;
+    top: 60%;
+    transform: translateY(-50%);
+    text-align: left;
+}
+
+.line1 {
+    font-family: monospace;
+}
+
+.line2 {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.bottom-text {
+    margin-left: 40px; 
+    padding-left: 620px;
+    text-align: left;
+    width: 100%;
+    font-size: 1.5em;
+    bottom: -100px; /* Move the text from the bottom of the container */
+    left: 50%; /* Center the text horizontally */
+    transform: translateX(-40%); /* Adjust for perfect centering */
+}
+  
+  .card img {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover img {
+    transform: scale(1.05); /* Slightly enlarges the image */
+  }
+
+  /* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .grid-container {
+      flex-direction: column; /* Stack sections vertically */
+      align-items: center; /* Center everything */
+    }
+  
+    .starter-pack {
+      width: 100%; /* Full width for starter pack on small screens */
+      margin-bottom: 20px; /* Space between starter pack and card grid */
+    }
+  
+    .card-grid {
+      width: 100%; /* Full width for the card grid */
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust grid layout */
+    }
+  
+    .card {
+      width: 100%; /* Cards take full width on mobile */
+    }
+  }
+ 
+ 

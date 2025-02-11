@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+h1{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 70px; 
+    text-align: center; 
+    letter-spacing: 0.25cap;
+    margin-bottom:20px;
+    padding-top: 100px;
+}
+
+p{
+    text-align: center;
+    font-size: 30px;
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+
+/* Style the tab buttons */
+.tablink {
+    background-color: #000000;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    display: flex;
+    justify-content: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    word-spacing: 2cm;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 0.25cm;
+    width: 25%;
+    text-decoration: none;
+  }
+  
+  .tablink:last-child{
+    margin-right:0;
+  }
+
+  /* Change background color of buttons on hover */
+  .tablink:hover {
+    background-color: #ffffff;
+    color: black;
+    transform: translateY(-5px); /* Slightly lift the tab on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+
+  
+  /* Set default styles for tab content */
+  .tabcontent {
+    color: white;
+    display: none;
+    padding: 50px;
+    text-align: center;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #ccc;
+  }
+
+  /* Show the content that corresponds to the current hash in the URL */
+:target {
+    display: block;
+  }
+  
+  /* Optional: Style active tab */
+  :target + .tablink {
+    background-color: #ccc;
+    color: rgb(0, 0, 0);
+  }
+
+ul{ 
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    width: fit-content;
+  }
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);/* Responsive grid */
+    gap: 15px; /* Space between images */
+    padding: 20px;
+  }
+
+.gallery-item img {
+  width: 100%;
+  height:auto; /* Ensures images maintain their aspect ratio */
+  border-radius: 8px; /* Optional: rounded corners on images */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow effect */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+
+
+ 

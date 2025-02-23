@@ -1,0 +1,22 @@
+html, body {
+    height: 100%;
+    margin: 0; /* Remove default margin */
+    overflow-y: scroll; /* Enable vertical scrolling */
+}
+
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #7a95a8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}

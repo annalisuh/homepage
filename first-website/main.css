@@ -1,0 +1,27 @@
+body {
+    font-size: 25px;
+}
+h1 {
+    font-size: 30 px;
+}
+p {
+    color:lightblue;
+    background-color:midnightblue;
+    font-size: 30px;
+    border: 200px dashed black;
+    padding: 50px;
+    text-align: center;
+}
+
+.special{ 
+    background-color:rgb(255, 255, 255);
+}
+
+.highlight{ 
+    color:darkgrey;
+    font-style: italic;
+}
+
+img {
+    max-width: 100%; 
+}
